@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navigation (Flexbox) */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #444;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+
+.navbar a:hover {
+  background: #555;
+  border-radius: 4px;
+}
+
+/* Main Layout (Grid) */
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Content and Sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Content */
+.content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Cards (Flexbox) */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #eee;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+/* ==========================
+   Media Queries
+   ========================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .main-grid {
+    grid-template-columns: 1fr; /* Stack content and sidebar */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
